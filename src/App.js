@@ -124,7 +124,7 @@ class App extends Component {
     const { name, value } = e.target;
     this.setState(
       {
-        [name]: value,
+        [name]: +value,
       },
       this.refreshTable
     );
@@ -134,8 +134,8 @@ class App extends Component {
     const { name, value } = e.target;
     this.setState(
       {
-        [name]: value,
-        newDiameter: value,
+        [name]: +value,
+        newDiameter: +value,
       },
       this.refreshTable
     );
@@ -179,7 +179,7 @@ class App extends Component {
           <thead>
             <tr>
               <th>
-                R<select value={newDiameter} name="newDiameter" onChange={this.handleChange}>
+                R<select value={newDiameter} name="newDiameter" onChange={this.handleDiameterChange}>
                 {this.getGoodDiameters().map(diameter =>
                   <option key={diameter} value={diameter}>{diameter}</option>
                 )}
