@@ -66,13 +66,15 @@ export const DIAMETER_OPTIONS = [
   24,
 ];
 
+export const WIDTH_SCORE_THRESHOLD = 0.35;
+
 export const TABLE_DISPLAY_OPTIONS = [
   ['diff', 'Разница диаметров'],
   ['rideHeightDiff', 'Разница в дорожном просвете'],
 ];
 
 export const COLORS = {
-  meh: '#e6ffe6',
-  good: '#99ff99',
-  best: '#33FF33',
+  meh: opacity => `hsla(0,0%,80%, ${opacity})`,
+  good: opacity => `hsla(45,100%,50%,  ${opacity})`,
+  best: opacity => `hsla(120,100%,50%,  ${opacity})`,
 };
