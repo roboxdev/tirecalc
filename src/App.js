@@ -152,17 +152,17 @@ class App extends Component {
       <div className="App">
         <div>
           Эталон
-          <select value={referenceWidth} name="width" onChange={this.handleReferenceChange}>
+          <select value={referenceWidth} name="referenceWidth" onChange={this.handleReferenceChange}>
             {WIDTH_OPTIONS.map(width =>
               <option key={width} value={width}>{width}</option>
             )}
           </select> /
-          <select value={referenceHeight} name="height" onChange={this.handleReferenceChange}>
+          <select value={referenceHeight} name="referenceHeight" onChange={this.handleReferenceChange}>
             {HEIGHT_OPTIONS.map(height =>
               <option key={height} value={height}>{height}</option>
             )}
           </select> /
-          R<select value={referenceDiameter} name="diameter" onChange={this.handleDiameterChange}>
+          R<select value={referenceDiameter} name="referenceDiameter" onChange={this.handleDiameterChange}>
             {DIAMETER_OPTIONS.map(diameter =>
               <option key={diameter} value={diameter}>{diameter}</option>
             )}
