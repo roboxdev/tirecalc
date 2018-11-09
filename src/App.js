@@ -107,8 +107,8 @@ class App extends Component {
   };
 
   getList = () => {
-    const { table, referenceDiameter } = this.state;
-    const a = groupBy(Object.values(table).filter(({ diameter, diffScore }) => referenceDiameter === diameter && diffScore <= 3), ({ diffScore }) => Math.max(diffScore, 1));
+    const { table, newDiameter } = this.state;
+    const a = groupBy(Object.values(table).filter(({ diameter, diffScore }) => newDiameter === diameter && diffScore <= 3), ({ diffScore }) => Math.max(diffScore, 1));
     console.log(a);
     return a;
   };
